@@ -1,0 +1,30 @@
+CREATE TABLE `person` (
+  `person_id` int NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(500) DEFAULT NULL,
+  `first_name` varchar(1000) DEFAULT NULL,
+  `last_name` varchar(500) DEFAULT NULL,
+  `dob` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`person_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=187 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `Address` (
+  `address_id` int NOT NULL AUTO_INCREMENT,
+  `person_id` int DEFAULT NULL,
+  `street_number` varchar(1000) DEFAULT NULL,
+  `city` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`address_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `Phone` (
+  `phone_id` int NOT NULL AUTO_INCREMENT,
+  `person_id` int DEFAULT NULL,
+  `phone_no` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`phone_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `email` (
+  `email_id` int NOT NULL AUTO_INCREMENT,
+  `person_id` int DEFAULT NULL,
+  `email` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`email_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=165 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
